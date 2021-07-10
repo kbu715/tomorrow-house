@@ -59,3 +59,12 @@
 
 \_normalize.scss
 \_reset.scss
+
+## font smoothing (mdn 검색)
+
+```css
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+```

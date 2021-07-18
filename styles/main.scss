@@ -1,8 +1,23 @@
-@import './constants/colors';
-@import './constants/typography';
+// @import './constants/colors';
 
-@import './base/fonts';
-@import './base/normalize';
-@import './base/reset';
+// @import './constants/typography';
 
-@import './layouts/grid';
+// @import './base/fonts';
+
+// @import './base/normalize';
+
+// @import './base/reset';
+
+// @import './layouts/grid';
+
+@mixin hongsi($color) {
+  color: $color;
+
+  .ic-close {
+    width: 40px;
+  }
+}
+
+p {
+  @include hongsi(red);
+}

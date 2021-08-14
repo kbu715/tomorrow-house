@@ -1,35 +1,23 @@
 @import './constants/colors';
-
 @import './constants/typography';
-
 @import './constants/breakpoints';
 
 @import './base/fonts';
-
 @import './base/normalize';
-
 @import './base/reset';
-
-@import './layouts/grid';
+@import './base/globals';
 
 @import './mixins/text-style';
-
 @import './mixins/responsive';
-
 @import './mixins/positions';
-
 @import './mixins/flexbox';
 
 @import './modules/tags';
-
 @import './modules/avatars';
-
 @import './modules/star-ratings';
-
 @import './modules/prices';
-
 @import './modules/buttons';
-
 @import './modules/forms';
-
 @import './modules/pagination';
+
+@import './layouts/grid';

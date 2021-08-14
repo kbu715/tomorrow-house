@@ -16,9 +16,9 @@
 
 ```json
 {
-  "semi": false, // 세미콜론 끄자
+  "semi": false,
   "singleQuote": true,
-  "endOfLine": "lf", // save 후 줄 바꿈
+  "endOfLine": "lf",
   "tabWidth": 2,
   "useTabs": false
 }

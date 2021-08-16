@@ -30,8 +30,8 @@
         </a>
       </h1>
 
-      <nav>
-        <h2>메뉴</h2>
+      <nav class="sm-hidden">
+        <h2 class="visually-hidden">메뉴</h2>
         <ul>
           <li><a href="/">커뮤니티</a></li>
           <li><a href="/">스토어</a></li>
@@ -39,37 +39,37 @@
         </ul>
       </nav>
 
-      <button type="button" aria-label="메뉴 열기 버튼">
+      <button class="sm-only" type="button" aria-label="메뉴 열기 버튼">
         <i class="ic-menu"></i>
       </button>
 
-      <button type="button" aria-label="검색창 열기 버튼">
+      <button class="lg-hidden" type="button" aria-label="검색창 열기 버튼">
         <i class="ic-search"></i>
       </button>
 
-      <div class="input-group">
+      <div class="input-group lg-only">
         <i class="ic-search" aria-hidden></i>
         <input class="form-input" type="text" placeholder="스토어 검색">
       </div>
 
-      <a href="/" aria-label="스크랩북 페이지로 이동">
+      <a class="sm-hidden" href="/" aria-label="스크랩북 페이지로 이동">
         <i class="ic-bookmark"></i>
       </a>
 
-      <a href="/" aria-label="내 소식 페이지로 이동">
+      <a class="sm-hidden" href="/" aria-label="내 소식 페이지로 이동">
         <i class="ic-bell"></i>
       </a>
 
       <a href="/" aria-label="장바구니 페이지로 이동">
         <i class="ic-cart"></i>
       </a>
-      <button type="button" aria-label="마이메뉴 열기 버튼">
+      <button class="sm-hidden" type="button" aria-label="마이메뉴 열기 버튼">
         <div class="avatar-32">
           <img src="./assets/images/img-user-01.jpg" alt="사딸라 아저씨">
         </div>
       </button>
 
-      <button type="button">
+      <button class="btn-primary btn-40 sm-hidden" type="button">
         글쓰기
         <i class="ic-chevron" aria-hidden></i>
       </button>

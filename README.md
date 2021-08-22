@@ -1,3 +1,4 @@
+<center><img src="/assets/images/Logo.svg" width="300" height="auto"></center>
 # 내일의 집
 
 ### 1. GNB

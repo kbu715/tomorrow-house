@@ -1,6 +1,7 @@
 .gnb {
   $padding: 8px;
   position: relative;
+  background-color: $white;
   border-bottom: 1px solid $border;
 
   &-wrapper {
@@ -23,7 +24,6 @@
 
     a {
       display: block;
-      padding: $padding;
     }
 
     img {
@@ -47,6 +47,23 @@
         .gnb-icon-button {
           margin-right: 8px;
         }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            font-weight: 700;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
       }
     }
 
@@ -58,10 +75,6 @@
       position: static;
       margin-right: 32px;
       transform: none;
-
-      a {
-        padding: $padding;
-      }
 
       img {
         height: 24px;

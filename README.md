@@ -4,6 +4,8 @@
 
 - 로그인을 하지 않은 경우
 
+![로그인하지않은경우](https://user-images.githubusercontent.com/63832678/130351090-75313826-5874-4f24-a2ac-ec7b0d54daca.png)
+
 ```html
 <div class="button-group">
   <button
@@ -29,6 +31,8 @@
 ```
 
 - 로그인을 한 경우
+
+![로그인한경우](https://user-images.githubusercontent.com/63832678/130351064-395f4a17-5751-447f-9608-649bb0de984b.png)
 
 ```html
 <div class="button-group">

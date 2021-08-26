@@ -1,0 +1,109 @@
+body {
+  background-color: $black;
+}
+
+.drawer-menu {
+  $drawer-menu-item-height: 36px;
+  $drawer-menu-list-padding: 8px;
+  $community-length: 8;
+  $store-length: 9;
+  $expert-length: 2;
+
+  @function _calculate-max-content-height($length) {
+    @return $drawer-menu-item-height * $length + $drawer-menu-list-padding;
+  }
+
+  &.is-active {
+    .drawer-menu-button {
+      color: $blue;
+    }
+  }
+
+  &.is-open {
+    &.is-community {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($community-length);
+      }
+    }
+
+    &.is-store {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($store-length);
+      }
+    }
+
+    &.is-expert {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($expert-length);
+      }
+    }
+
+    // .ic-chevron
+    .drawer-menu-button i:last-child {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .drawer-menu-list {
+      padding-bottom: $drawer-menu-list-padding;
+    }
+  }
+
+  &-button {
+    @include flexbox(start);
+    @include text-style(18, $primary);
+    position: relative;
+    width: 100%;
+    height: 54px;
+    padding: 0 8px;
+    font-weight: 700;
+    transition: color 200ms ease-in-out;
+
+    i {
+      &:first-child {
+        position: relative; // TODO: Check->다른 아이콘도 그런지 체크!
+        top: 1px; // TODO:아이콘이 살짝 올라가서 조정
+        margin-right: 8px;
+        font-size: 24px;
+        color: $primary;
+      }
+
+      &:last-child {
+        @include pos-center-y;
+        right: 8px;
+        font-size: 16px;
+        color: $primary;
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+
+    // display: none; // transition을 display에 먹일수 없으므로 다른 방식을 택하자
+    transition: max-height 200ms ease-in-out;
+  }
+
+  &-item {
+    &.is-active {
+      a {
+        color: $blue;
+      }
+    }
+
+    a {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      width: 100%;
+      height: $drawer-menu-item-height;
+      padding: 0 12px;
+      font-weight: 700;
+    }
+
+    .ic-new {
+      font-size: 16px;
+      color: $red;
+    }
+  }
+}

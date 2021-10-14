@@ -1,7 +1,13 @@
 .floating-order-form {
+  $global-header-height: $gnb-height-md + $lnb-height_md +
+    $product-tab-height-md;
+  position: sticky;
+  top: $global-header-height;
   @include flexbox(start, start);
   flex-direction: column;
-  height: 700px; //TODO: 고칠예정
+  min-height: calc(100vh - #{$global-header-height + $global-footer-height});
+  max-height: calc(100vh - #{$global-header-height});
+  padding: 24px 0;
 
   & > * {
     width: 100%;
@@ -17,7 +23,6 @@
   .order-checkouts {
     flex-grow: 1;
     overflow: auto;
-    background-color: hotpink;
 
     &::-webkit-scrollbar {
       display: none;

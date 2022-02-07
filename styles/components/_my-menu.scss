@@ -1,6 +1,6 @@
 .my-menu {
-  $tooltip-size: 12px;
   $button-size: 32px;
+  $tooltip-size: 12px;
 
   position: relative;
 
@@ -10,8 +10,8 @@
     }
 
     .my-menu-content {
-      visibility: visible;
       opacity: 1;
+      visibility: visible;
       transform: translate3d(-50%, 0, 0);
     }
   }
@@ -21,8 +21,8 @@
     height: $button-size;
     overflow: hidden;
     background-image: url('./assets/images/img-user-default.png');
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: contain;
     border: 3px solid $white;
     border-radius: 50%;
@@ -43,14 +43,13 @@
   &-content {
     @include pos-center-x;
     top: $button-size + $tooltip-size + 8px;
-    visibility: hidden;
     border-radius: 4px;
-    box-shadow: $dropdown-shadow;
     opacity: 0;
-    transition: transform 200ms ease-in-out opacity 200ms ease-in-out,
-      visibility 200ms ease-in-out;
-
+    visibility: hidden;
     transform: translate3d(-50%, -10px, 0);
+    box-shadow: $dropdown-shadow;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out,
+      visibility 200ms ease-in-out;
 
     &::before,
     &::after {
@@ -59,11 +58,11 @@
       display: block;
       width: 0;
       height: 0;
-      content: '';
       border-top: $tooltip-size solid transparent;
       border-right: 10px solid transparent;
       border-bottom: $tooltip-size solid transparent;
       border-left: 10px solid transparent;
+      content: '';
     }
 
     &::before {

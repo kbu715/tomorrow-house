@@ -186,3 +186,12 @@
 | X      | O      | O       | `.sm-hidden` |
 | X      | X      | O       | `.lg-only`   |
 | O      | X      | O       | `.md-hidden` |
+
+#### To Do List
+
+<개인적으로 구현해보기>
+
+| Desc.                         | ✅  |
+| ----------------------------- | --- |
+| Implement Order-Form Bookmark |     |
+| Implement Price by quantity   |     |

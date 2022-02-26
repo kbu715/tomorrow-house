@@ -79,6 +79,42 @@ function detectTabPanelPosition() {
   // console.log(productTabPanelPositionMap)
 }
 
+function updateActiveTabOnScroll() {
+  // 스크롤 위치에 따라서 activeTab 업데이트
+
+  // NOTE:
+  // 1. 현재 유저가 얼마만큼 스크롤을 했느냐 -> window.scrollY
+  // 2. 각 tabPanel y축 위치 -> productTabPanelPositionMap
+
+  const scrolledAmount =
+    window.scrollY +
+    (window.innerWidth >= 768 ? TOP_HEADER_DESKTOP + 80 : TOP_HEADER_MOBILE + 8)
+
+  let newActiveTab
+  if (scrolledAmount >= productTabPanelPositionMap['product-recommendation']) {
+    newActiveTab = productTabButtonList[4]
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-shipment']) {
+    newActiveTab = productTabButtonList[3]
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-inquiry']) {
+    newActiveTab = productTabButtonList[2]
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-review']) {
+    newActiveTab = productTabButtonList[1]
+  } else {
+    newActiveTab = productTabButtonList[0]
+  }
+
+  if (newActiveTab) {
+    newActiveTab = newActiveTab.parentNode
+
+    if (newActiveTab !== currentActiveTab) {
+      newActiveTab.classList.add('is-active')
+      currentActiveTab.classList.remove('is-active')
+      currentActiveTab = newActiveTab
+    }
+  }
+}
+
 //NOTE: window의 모든 요소들이 load 되었을 때 : 'load'
 window.addEventListener('load', detectTabPanelPosition)
 window.addEventListener('resize', detectTabPanelPosition)
+window.addEventListener('scroll', updateActiveTabOnScroll)

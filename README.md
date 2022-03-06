@@ -187,6 +187,10 @@
 | X      | X      | O       | `.lg-only`   |
 | O      | X      | O       | `.md-hidden` |
 
+#### window.scrollY, element.getBoundingClientRect().top
+
+![image](https://user-images.githubusercontent.com/63832678/156906287-f21b1457-4f62-4ba8-8126-25b1a6bacb03.png)
+
 #### To Do List
 
 <개인적으로 구현해보기>

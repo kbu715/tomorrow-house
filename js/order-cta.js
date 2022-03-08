@@ -26,12 +26,19 @@ function toggleOrderCtaBookmark() {
   // 3. 카운트 숫자 값을 변경
 
   const [icon, countSpan] = this.children // [아이콘, 카운트 span]
-  const count = Number(countSpan.innerHTML.replaceAll(',', ''))
-  let newCount = count
+  // const count = Number(countSpan.innerHTML.replaceAll(',', ''))
+  let newCount
+  if (localStorage.getItem('countOfBookmark')) {
+    newCount = JSON.parse(localStorage.getItem('countOfBookmark'))
+  } else {
+    newCount = store.countOfBookmark
+  }
   if (this.classList.contains('is-active')) {
     newCount -= 1
+    localStorage.setItem('countOfBookmark', newCount)
   } else {
     newCount += 1
+    localStorage.setItem('countOfBookmark', newCount)
   }
 
   countSpan.innerHTML = newCount.toLocaleString()
@@ -39,6 +46,36 @@ function toggleOrderCtaBookmark() {
   icon.classList.toggle('ic-bookmark')
   icon.classList.toggle('ic-bookmark-filled')
   this.classList.toggle('is-active')
+
+  store.isBookmarked = !store.isBookmarked
+  store.countOfBookmark = newCount
+  localStorage.setItem('isBookmarked', store.isBookmarked)
+}
+
+function render() {
+  const [icon, countSpan] = orderCtaBookmarkButton.children
+  store.isBookmarked = JSON.parse(localStorage.getItem('isBookmarked'))
+
+  if (localStorage.getItem('countOfBookmark')) {
+    store.countOfBookmark = JSON.parse(localStorage.getItem('countOfBookmark'))
+  }
+
+  countSpan.innerHTML = store.countOfBookmark.toLocaleString()
+  countSpan.setAttribute(
+    'aria-label',
+    `북마크 ${store.countOfBookmark.toLocaleString()}회`
+  )
+  if (store.isBookmarked) {
+    icon.classList.add('ic-bookmark-filled')
+    icon.classList.remove('ic-bookmark')
+    orderCtaBookmarkButton.classList.add('is-active')
+  } else {
+    icon.classList.add('ic-bookmark')
+    icon.classList.remove('ic-bookmark-filled')
+    orderCtaBookmarkButton.classList.remove('is-active')
+  }
 }
 
 orderCtaBookmarkButton.addEventListener('click', toggleOrderCtaBookmark)
+window.addEventListener('load', render)
+window.addEventListener('resize', _.throttle(render, 1000))

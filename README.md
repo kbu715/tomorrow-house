@@ -197,5 +197,5 @@
 
 | Desc.                         | ✅  |
 | ----------------------------- | --- |
-| Implement Order-Form Bookmark |     |
+| Implement Order-Form Bookmark | ✅  |
 | Implement Price by quantity   |     |

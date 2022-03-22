@@ -199,5 +199,5 @@
 | ------------------------------------------------------ | --- |
 | Implement Order-Form Bookmark                          | ✅  |
 | Implement Indication Total Price depending on quantity |     |
-| Activate GNB, LNB items                                |     |
+| Activate GNB, LNB items                                | ✅  |
 | Activate My-menu button group (글쓰기 버튼)            |     |

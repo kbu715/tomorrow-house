@@ -105,7 +105,7 @@
       <button type="button" class="btn-ghost btn-55" disabled>버튼입니다</button>
     </div>
     <div>
-      <select disabled>
+      <select class="form-select">
         <option value="1">선택사항 1</option>
         <option value="2">선택사항 2</option>
         <option value="3">선택사항 3</option>
@@ -114,7 +114,7 @@
       </select>
       <div class="select-group is-active">
         <select class="form-select">
-          <option value="1">선택사항 1선택사항 1</option>
+          <option value="1">선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1선택사항 1</option>
           <option value="2">선택사항 2</option>
           <option value="3">선택사항 3</option>
           <option value="4">선택사항 4</option>
@@ -133,8 +133,8 @@
           <i class="ic-chevron"></i>
         </button>
         <ol class="page-list">
-          <li class="page-item is-active"><a href="/">1</a></li>
-          <li class="page-item"><a href="/">2</a></li>
+          <li class="page-item"><a href="/">1</a></li>
+          <li class="page-item is-active"><a href="/">2</a></li>
           <li class="page-item"><a href="/">3</a></li>
           <li class="page-item"><a href="/">4</a></li>
           <li class="page-item"><a href="/">5</a></li>
@@ -218,7 +218,24 @@
       </div>
 
     </div>
+    <!-- 툴팁 꼭다리 만들기 -->
+    <h2>툴팁 꼭다리 만들기 실습</h2>
+    <div class="tooltip">
+      
+    </div>
   </div>
 </body>
+
+<style>
+  .tooltip {
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: yellow;
+  }
+</style>
 
 </html>

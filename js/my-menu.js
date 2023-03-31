@@ -21,4 +21,6 @@ function toggleMyMenu() {
   myMenu.classList.toggle('is-active')
 }
 
-myMenuButton.addEventListener('click', toggleMyMenu)
+if (myMenuButton) {
+  myMenuButton.addEventListener('click', toggleMyMenu)
+}

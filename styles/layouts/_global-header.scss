@@ -1,6 +1,6 @@
 .global-header {
   width: 100%;
-  height: $gnb-height-sm + $lnb-height-sm;
+  height: $gnb-height-sm + $lnb-height-sm; // .gnb .lnb position: fixed 영향으로 모두 집을 나갔기 때문에 height를 지정해줘야 main 콘텐츠를 가리지 않고 header - main - footer 순으로 제대로 정렬 가능하다
 
   .gnb,
   .lnb {

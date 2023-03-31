@@ -56,8 +56,8 @@
 
     i {
       &:first-child {
-        position: relative; // TODO: Check->다른 아이콘도 그런지 체크!
-        top: 1px; // TODO:아이콘이 살짝 올라가서 조정
+        position: relative; // Check->다른 아이콘도 그런지 체크!
+        top: 1px; // 아이콘이 살짝 올라가서 조정
         margin-right: 8px;
         font-size: 24px;
         color: $primary;

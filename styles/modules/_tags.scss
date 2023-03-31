@@ -1,4 +1,5 @@
 %tag-base {
+  // 공통스타일
   @include inline-flexbox;
   @include text-style(12);
   height: 20px;

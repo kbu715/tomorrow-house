@@ -44,7 +44,7 @@
     text-align: center;
     letter-spacing: -0.01em;
     background-color: $red;
-    border-radius: $badge-size / 2;
+    border-radius: $badge-size / 2; // 8px // 8px 이상이면 다 똑같다 // 50% 이상이면 다 똑같다
   }
 
   @include responsive(T) {

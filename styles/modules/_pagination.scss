@@ -53,6 +53,12 @@
         color: $white !important;
         background-color: $blue;
       }
+
+      // !important로 대체
+      
+      // &:hover {
+      //   color: $white;
+      // }
     }
 
     &:last-child {

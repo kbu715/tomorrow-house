@@ -5,7 +5,7 @@
 
   &-wrapper {
     @include flexbox(between);
-    height: $gnb-height-sm - 1px;
+    height: $gnb-height-sm - 1px; // 50px - 1px // .gnb border-bottom 1px이 존재하기 때문에 gnb 전체 height를 50px로 맞추기 위한 작업
   }
 
   &-right {
@@ -71,8 +71,11 @@
     }
 
     .logo {
+
+      // position: absolute -> static
       position: static;
       margin-right: 32px;
+      // transform: translate(-50%, -50%) -> none
       transform: none;
 
       img {

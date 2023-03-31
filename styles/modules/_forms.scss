@@ -7,7 +7,7 @@
   background-color: $white;
   border: 1px solid $border;
   border-radius: 4px;
-  appearance: none;
+  appearance: none; // user agent stylesheet이 만든 기본 appearance 제거
   transition: background-color 300ms ease-in-out;
 
   &::placeholder {
@@ -57,7 +57,6 @@
   }
 }
 
-// Note:
 .input-group {
   position: relative;
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 체크박스 버튼 스타일 */
+    .checkbox-button {
+      display: inline-block;
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      margin: 5px;
+    }
+
+    /* 체크된 버튼 스타일 */
+    .checkbox-button.checked {
+      background-color: #00b0ff;
+      color: #fff;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <label class="checkbox-button">
+    <input type="checkbox" name="button" value="1"> 버튼 1
+  </label>
+  <label class="checkbox-button">
+    <input type="checkbox" name="button" value="2"> 버튼 2
+  </label>
+  <label class="checkbox-button">
+    <input type="checkbox" name="button" value="3"> 버튼 3
+  </label>
+
+  <script>
+    // 체크박스 상태 변경 시 클래스 토글
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const button = checkbox.parentNode;
+        if (checkbox.checked) {
+          button.classList.add('checked');
+        } else {
+          button.classList.remove('checked');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
